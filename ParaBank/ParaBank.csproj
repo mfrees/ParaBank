@@ -60,14 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillPaymentServicePage.cs" />
+    <Compile Include="PageObjects\BillPaymentServicePage.cs" />
     <Compile Include="PageObjects\accountsOverviewApplicationPage.cs" />
     <Compile Include="PageObjects\AdminApplicationPage.cs" />
     <Compile Include="PageObjects\BaseApplicationPage.cs" />
     <Compile Include="PageObjects\InvalidLoginUser.cs" />
     <Compile Include="PageObjects\LoginApplicationPage.cs" />
     <Compile Include="PageObjects\ValidLoginUser.cs" />
-    <Compile Include="PayeeInformation.cs" />
+    <Compile Include="PageObjects\PayeeInformation.cs" />
     <Compile Include="TestScenario%27s\BaseTest.cs" />
     <Compile Include="TestScenario%27s\LoginPageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,7 +75,7 @@
     <Compile Include="PageObjects\OpenNewAccountApplicationPage.cs" />
     <Compile Include="TestScenario%27s\RequestLoanTest.cs" />
     <Compile Include="TestScenario%27s\OpenNewAccount.cs" />
-    <Compile Include="BillPaymentTest.cs" />
+    <Compile Include="TestScenario%27s\BillPaymentTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

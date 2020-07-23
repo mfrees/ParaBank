@@ -7,7 +7,7 @@ namespace ParaBank
 {
     [TestFixture]
     [Parallelizable]
-    [Category("Regression"), Category("Text Fields")]
+    [Category("Regression Tests"), Category("Text Fields")]
     public class BillPaymentTest : BaseTest
     {
         [Test]

@@ -16,12 +16,18 @@ namespace ParaBank
         public IWebElement OpenNewAccountLinkText => Driver.FindElement(By.LinkText("Open New Account"));
         public IWebElement OpenNewAccountButton => Driver.FindElement(By.XPath("//*[@value='Open New Account']"));
 
-        internal void ApplyAndOpenNewAccount()
+        internal void ApplyAndOpenNewSavingsAccount()
         {
             OpenNewAccountLinkText.Click(); //clicks the open new account link text
             Driver.FindElement(By.XPath("//*[@value='1']")).Click(); //selects savings account
-            Thread.Sleep(1000);
+            Thread.Sleep(1000); //wait
             OpenNewAccountButton.Click();//clicks the open new account button
+        }
+
+        internal void ApplyAndOpenNewCheckingAccount()
+        {
+            OpenNewAccountLinkText.Click(); //clicks the open new account link text
+            OpenNewAccountButton.Click(); //clicks the open new account button
         }
     }
 }

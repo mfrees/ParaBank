@@ -6,7 +6,7 @@ namespace ParaBank
 {
     [TestFixture]
     [Parallelizable] //[parrallelizable(parellelScope.None)] if you do not want tests to run in parallel
-    [Category("LoginPageTests"), Category("Smoke Tests")]
+    [Category("LoginPageTests"), Category("Regression Tests")]
     public class LoginPageTests : BaseTest  //BaseTest is the use of inheritance (parent and child setup) which holds the setup and teardown and the driver 
     {
         [Description("This test case registers a new user.")]
