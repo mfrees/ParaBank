@@ -16,14 +16,6 @@ namespace ParaBank
         [Test]
         public void OpenNewBankAccount()
         {
-            var validloginuser = new ValidLoginUser();
-            validloginuser.Username = "john";
-            validloginuser.Password = "demo";
-
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-            loginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
-
             var opennewaccountapplicationpage = new OpenNewAccountApplicationPage(Driver);
             opennewaccountapplicationpage.ApplyAndOpenNewSavingsAccount();
             Thread.Sleep(1000);
@@ -36,19 +28,9 @@ namespace ParaBank
         [Test]
         public void OpenNewCheckingAccount()
         {
-            var validloginuser = new ValidLoginUser();
-            validloginuser.Username = "john";
-            validloginuser.Password = "demo";
-
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-            loginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
-
             var opennewaccountapplicationpage = new OpenNewAccountApplicationPage(Driver);
             opennewaccountapplicationpage.ApplyAndOpenNewCheckingAccount();
             Assert.That("Account Opened!", Is.EqualTo("Account Opened!"));
-
-
         }
     }
 }

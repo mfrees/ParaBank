@@ -16,14 +16,6 @@ namespace ParaBank
         [Test]
         public void ApplyForaLoan()
         {
-            var validloginuser = new ValidLoginUser();
-            validloginuser.Username = "john";
-            validloginuser.Password = "demo";
-
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-            loginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
-
             var requestloanapplicationpage = new RequestLoanApplicationPage(Driver);
             requestloanapplicationpage.ApplyAndSubmitLoanRequest("2000", "500");
             Thread.Sleep(1000);
@@ -36,14 +28,6 @@ namespace ParaBank
         [Test]
         public void MandatoryFields()
         {
-            var validloginuser = new ValidLoginUser();
-            validloginuser.Username = "john";
-            validloginuser.Password = "demo";
-
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-            loginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
-
             var requestloanapplicationpage = new RequestLoanApplicationPage(Driver);
             requestloanapplicationpage.MandatoryFieldsCheck();
             Thread.Sleep(1000);

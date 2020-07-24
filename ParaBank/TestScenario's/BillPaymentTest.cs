@@ -13,10 +13,6 @@ namespace ParaBank
         [Test]
         public void EnterPayeeInfo()
         {
-            var validloginuser = new ValidLoginUser();
-            validloginuser.Username = "john";
-            validloginuser.Password = "demo";
-
             var payeeinformation = new PayeeInformation();
             payeeinformation.PayeeName = "William Davies";
             payeeinformation.Address = "123 Williams Terrace";
@@ -28,10 +24,7 @@ namespace ParaBank
             payeeinformation.VerifyAccount = "81779855";
             payeeinformation.Amount = "10.00";
 
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-            loginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
-
+            
             var billpaymentservicepage = new BillPaymentServicePage(Driver);
             billpaymentservicepage.FillOutFormAndSubmit(payeeinformation);
             Thread.Sleep(2000);
@@ -43,15 +36,6 @@ namespace ParaBank
         [Test]
         public void PayeeNameMandatoryFieldError()
         {
-            var validloginuser = new ValidLoginUser();
-            validloginuser.Username = "john";
-            validloginuser.Password = "demo";
-
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-            loginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
-
-
             var billpaymentservicepage = new BillPaymentServicePage(Driver);
             billpaymentservicepage.PayeeNameMandatoryField();
             Thread.Sleep(1000);

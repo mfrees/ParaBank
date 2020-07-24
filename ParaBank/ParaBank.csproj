@@ -76,6 +76,7 @@
     <Compile Include="TestScenario%27s\RequestLoanTest.cs" />
     <Compile Include="TestScenario%27s\OpenNewAccount.cs" />
     <Compile Include="TestScenario%27s\BillPaymentTest.cs" />
+    <Compile Include="TestScenario%27s\BaseTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

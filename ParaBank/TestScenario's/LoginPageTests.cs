@@ -7,7 +7,7 @@ namespace ParaBank
     [TestFixture]
     [Parallelizable] //[parrallelizable(parellelScope.None)] if you do not want tests to run in parallel
     [Category("LoginPageTests"), Category("Regression Tests")]
-    public class LoginPageTests : BaseTest  //BaseTest is the use of inheritance (parent and child setup) which holds the setup and teardown and the driver 
+    public class LoginPageTests : BaseTest1  //BaseTest1 is the use of inheritance (parent and child setup) which holds the setup and teardown and the driver 
     {
         [Description("This test case registers a new user.")]
         [Author("Michael Rees")]
@@ -20,7 +20,7 @@ namespace ParaBank
             var adminApplicationPage = new AdminApplicationPage(Driver);
             adminApplicationPage.CleanWebsite();
             loginApplicationPage.RegisterNewUserAndSubmit("tom", "williams", "156", "Swansea", "Swansea", "SA1 3ER", "07969323254", "123456789", "tom", "williams", "williams");
-            String matching_str = "Your account was created successfully. You are now logged in.";
+            string matching_str = "Your account was created successfully. You are now logged in.";
             Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
         }
         [Description("This test verifies that a user can log into the application")]
