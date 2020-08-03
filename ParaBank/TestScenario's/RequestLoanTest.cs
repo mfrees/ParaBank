@@ -10,7 +10,7 @@ namespace ParaBank
     [Category("Request Loan")]
     public class RequestLoan : BaseTest
     {
-        [Description("Apply for a loan ")]
+        [Description("Apply for a loan")]
         [Author("Michael Rees")]
         [Category("Regression Tests"), Category("Dropdown Lists")]
         [Test]
