@@ -14,12 +14,25 @@ namespace ParaBank
         [Test]
         public void RegisterUser()
         {
+            var registeruserinformation = new RegisterUserInformation();
+            registeruserinformation.FirstName = "tom";
+            registeruserinformation.LastName = "williams";
+            registeruserinformation.Address = "156";
+            registeruserinformation.City = "Swansea";
+            registeruserinformation.State = "Swansea";
+            registeruserinformation.ZipCode = "SA1 3ER";
+            registeruserinformation.Phone = "07969323254";
+            registeruserinformation.SocialSecurityNumber = "123456789";
+            registeruserinformation.Username = "tom";
+            registeruserinformation.Password = "williams";
+            registeruserinformation.ConfirmPassword = "williams";
+
             var loginApplicationPage = new LoginApplicationPage(Driver);
             loginApplicationPage.GoTo();
 
             var adminApplicationPage = new AdminApplicationPage(Driver);
             adminApplicationPage.CleanWebsite();
-            loginApplicationPage.RegisterNewUserAndSubmit("tom", "williams", "156", "Swansea", "Swansea", "SA1 3ER", "07969323254", "123456789", "tom", "williams", "williams");
+            loginApplicationPage.RegisterNewUserAndSubmit(registeruserinformation);
             string matching_str = "Your account was created successfully. You are now logged in.";
             Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
         }

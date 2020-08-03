@@ -26,22 +26,35 @@ namespace ParaBank
         public IWebElement Username => Driver.FindElement(By.Name("username"));
         public IWebElement Password => Driver.FindElement(By.Name("password"));
         public IWebElement LoginButton => Driver.FindElement(By.XPath("//*[@Type='submit']"));
+        public IWebElement RegisterLinkText => Driver.FindElement(By.LinkText("Register"));
+        public IWebElement RegisterFirstName => Driver.FindElement(By.Id("customer.firstName"));
+        public IWebElement RegisterLastName => Driver.FindElement(By.Id("customer.lastName"));
+        public IWebElement RegisterAddress => Driver.FindElement(By.Id("customer.address.street"));
+        public IWebElement RegisterCity => Driver.FindElement(By.Id("customer.address.city"));
+        public IWebElement RegisterState => Driver.FindElement(By.Id("customer.address.state"));
+        public IWebElement RegisterZipCode => Driver.FindElement(By.Id("customer.address.zipCode"));
+        public IWebElement RegisterPhone => Driver.FindElement(By.Id("customer.phoneNumber"));
+        public IWebElement RegisterSocialSecurityNumber => Driver.FindElement(By.Id("customer.ssn"));
+        public IWebElement RegisterUsername => Driver.FindElement(By.Id("customer.username"));
+        public IWebElement RegisterPassword => Driver.FindElement(By.Id("customer.password"));
+        public IWebElement RegisterPasswordConfirm => Driver.FindElement(By.Id("repeatedPassword"));
+        public IWebElement RegisterButton => Driver.FindElement(By.XPath("//*[@value='Register']"));
 
-        internal void RegisterNewUserAndSubmit(string firstName, string lastName, string address, string city, string state, string zipCode, string phone, string socialSecurityNumber, string userName, string password, string confirmPassword)
+        internal void RegisterNewUserAndSubmit(RegisterUserInformation registeruserinformation)
         {
-            Driver.FindElement(By.LinkText("Register")).Click(); //clicks ths register link
-            Driver.FindElement(By.Id("customer.firstName")).SendKeys(firstName); //this and following lines enter the user data
-            Driver.FindElement(By.Id("customer.lastName")).SendKeys(lastName);
-            Driver.FindElement(By.Id("customer.address.street")).SendKeys(address);
-            Driver.FindElement(By.Id("customer.address.city")).SendKeys(city);
-            Driver.FindElement(By.Id("customer.address.state")).SendKeys(state);
-            Driver.FindElement(By.Id("customer.address.zipCode")).SendKeys(zipCode);
-            Driver.FindElement(By.Id("customer.phoneNumber")).SendKeys(phone);
-            Driver.FindElement(By.Id("customer.ssn")).SendKeys(socialSecurityNumber);
-            Driver.FindElement(By.Id("customer.username")).SendKeys(userName);
-            Driver.FindElement(By.Id("customer.password")).SendKeys(password);
-            Driver.FindElement(By.Id("repeatedPassword")).SendKeys(confirmPassword);
-            Driver.FindElement(By.XPath("//*[@value='Register']")).Click(); //clicks the register button
+            RegisterLinkText.Click(); //clicks ths register link
+            RegisterFirstName.SendKeys(registeruserinformation.FirstName); //populates the firstname field
+            RegisterLastName.SendKeys(registeruserinformation.LastName); //populates the last name field
+            RegisterAddress.SendKeys(registeruserinformation.Address); //populates the address
+            RegisterCity.SendKeys(registeruserinformation.City); //populates the city field
+            RegisterState.SendKeys(registeruserinformation.State); //populates the state field
+            RegisterZipCode.SendKeys(registeruserinformation.ZipCode); //populates the zip code field
+            RegisterPhone.SendKeys(registeruserinformation.Phone); //populates the phone field
+            RegisterSocialSecurityNumber.SendKeys(registeruserinformation.SocialSecurityNumber); //populates the social security number
+            RegisterUsername.SendKeys(registeruserinformation.Username); //populates the username field
+            RegisterPassword.SendKeys(registeruserinformation.Password); //populates the password field
+            RegisterPasswordConfirm.SendKeys(registeruserinformation.ConfirmPassword); //populates the confirm password field
+            RegisterButton.Click(); //clicks the register button
         }
 
         internal void GoTo()
