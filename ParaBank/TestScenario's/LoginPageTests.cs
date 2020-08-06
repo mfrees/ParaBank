@@ -78,7 +78,17 @@ namespace ParaBank
             loginApplicationPage.ClickLoginButtonWithoutUsernameAndPassword();
             Assert.That("Please enter a username and password.", Is.EqualTo("Please enter a username and password."));
         }
-        [Description("This test verifies the forgot login page is correctly displayed.")]
+        [Description("Tests that the Login button is enabled.")]
+        [Author("Michael Rees")]
+        [Test]
+        public void VerifyLoginButtonEnabled()
+        {
+            var loginApplicationPage = new LoginApplicationPage(Driver);
+            loginApplicationPage.GoTo();
+
+            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@Type='submit']")).Enabled);
+        }
+        [Description("Test verifies that the Forgot login binfo? hyperlink is displayed.")]
         [Author("MichaelRees")]
         [Test]
         public void ForgotLoginInfoLink()
@@ -86,9 +96,17 @@ namespace ParaBank
             var loginApplicationPage = new LoginApplicationPage(Driver);
             loginApplicationPage.GoTo();
 
-            loginApplicationPage.ClickForgotLoginInfoLink();
-            String matching_str = "Customer Lookup";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            Assert.IsTrue(Driver.FindElement(By.LinkText("Forgot login info?")).Enabled);
+        }
+        [Description("Tests that the Register hyperlink is enabled.")]
+        [Author("Michael Rees")]
+        [Test]
+        public void VerifyRegisterLinkIsEnabled()
+        {
+            var loginApplicationPage = new LoginApplicationPage(Driver);
+            loginApplicationPage.GoTo();
+
+            Assert.IsTrue(Driver.FindElement(By.LinkText("Register")).Enabled);
         }
     }
 }
