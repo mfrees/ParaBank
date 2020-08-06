@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using System;
 
 namespace ParaBank
 {
@@ -61,6 +62,11 @@ namespace ParaBank
         {
             Driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
             Assert.IsTrue(IsVisible);
+        }
+
+        internal void ClickLoginButtonWithoutUsernameAndPassword()
+        {
+            LoginButton.Click();
         }
 
         internal accountsOverviewApplicationPage EnterValidCredentialsAndLogin(ValidLoginUser validuser)

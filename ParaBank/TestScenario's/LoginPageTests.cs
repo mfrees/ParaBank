@@ -67,6 +67,17 @@ namespace ParaBank
             String matching_str = "The username and password could not be verified.";
             Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
         }
+        [Description("Test clicks on the login button without any credentials popu;ated and validates correct error message is displayed.")]
+        [Author("Michael Rees")]
+        [Test]
+        public void ClickLoginButtonWithNoCredentials()
+        {
+            var loginApplicationPage = new LoginApplicationPage(Driver);
+            loginApplicationPage.GoTo();
+
+            loginApplicationPage.ClickLoginButtonWithoutUsernameAndPassword();
+            Assert.That("Please enter a username and password.", Is.EqualTo("Please enter a username and password."));
+        }
         [Description("This test verifies the forgot login page is correctly displayed.")]
         [Author("MichaelRees")]
         [Test]
