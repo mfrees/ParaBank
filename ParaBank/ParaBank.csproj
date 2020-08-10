@@ -79,8 +79,8 @@
     <Compile Include="TestScenario%27s\BaseTest1.cs" />
     <Compile Include="PageObjects\RegisterUserInformation.cs" />
     <Compile Include="TestScenario%27s\AccountsOverviewTest.cs" />
-    <Compile Include="TransferFundsTests.cs" />
-    <Compile Include="TransferFundsApplicationPage.cs" />
+    <Compile Include="TestScenario%27s\TransferFundsTests.cs" />
+    <Compile Include="PageObjects\TransferFundsApplicationPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
