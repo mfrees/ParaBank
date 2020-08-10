@@ -69,14 +69,14 @@ namespace ParaBank
             LoginButton.Click();
         }
 
-        internal accountsOverviewApplicationPage EnterValidCredentialsAndLogin(ValidLoginUser validuser)
+        internal AccountsOverviewApplicationPage EnterValidCredentialsAndLogin(ValidLoginUser validuser)
         {
             Username.Clear(); //clear username field
             Username.SendKeys(validuser.Username); //enter username
             Password.Clear(); //clear the password field
             Password.SendKeys(validuser.Password); //enter the password
             LoginButton.Click(); //clicks the login button
-            return new accountsOverviewApplicationPage(Driver);
+            return new AccountsOverviewApplicationPage(Driver);
         }
 
         internal void EnterInvalidCredentialsAndSubmit(InvalidLoginUser invaliduser)

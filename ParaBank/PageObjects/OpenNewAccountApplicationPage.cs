@@ -8,7 +8,7 @@ namespace ParaBank
 {
     internal class OpenNewAccountApplicationPage :BaseApplicationPage
     {
-        private IWebDriver driver;
+        //private IWebDriver driver;
 
         public OpenNewAccountApplicationPage(IWebDriver driver) : base(driver) { }
 

@@ -33,6 +33,7 @@ namespace ParaBank
             Assert.That("Account Opened!", Is.EqualTo("Account Opened!"));
         }
         [Description("Verify the page header")]
+        [Category("Regression Tests")]
         [Author("Michael Rees")]
         [Test]
         public void PageHeader()

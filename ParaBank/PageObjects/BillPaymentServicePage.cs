@@ -9,7 +9,7 @@ namespace ParaBank
 
         public BillPaymentServicePage(IWebDriver driver) :base(driver) { }
 
-        //below are the list of properties
+        //below are the list of objects
         public IWebElement BillPayLinkText => Driver.FindElement(By.LinkText("Bill Pay"));
         public IWebElement PayeeNameField => Driver.FindElement(By.Name("payee.name"));
         public IWebElement AddressField => Driver.FindElement(By.Name("payee.address.street"));
