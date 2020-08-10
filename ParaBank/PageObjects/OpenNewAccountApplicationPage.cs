@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
@@ -28,6 +29,12 @@ namespace ParaBank
         {
             OpenNewAccountLinkText.Click(); //clicks the open new account link text
             OpenNewAccountButton.Click(); //clicks the open new account button
+        }
+
+        internal void VerifyPageHeader()
+        {
+            OpenNewAccountLinkText.Click();
+            Assert.That("Open New Account", Is.EqualTo("Open New Account"));
         }
     }
 }

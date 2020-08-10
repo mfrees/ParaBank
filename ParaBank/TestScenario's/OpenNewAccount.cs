@@ -32,5 +32,13 @@ namespace ParaBank
             opennewaccountapplicationpage.ApplyAndOpenNewCheckingAccount();
             Assert.That("Account Opened!", Is.EqualTo("Account Opened!"));
         }
+        [Description("Verify the page header")]
+        [Author("Michael Rees")]
+        [Test]
+        public void PageHeader()
+        {
+            var opennewaccountapplicationpage = new OpenNewAccountApplicationPage(Driver);
+            opennewaccountapplicationpage.VerifyPageHeader();
+        }
     }
 }

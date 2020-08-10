@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 
 [assembly: Parallelizable(ParallelScope.Fixtures)]
-[assembly: LevelOfParallelism(2)]
+[assembly: LevelOfParallelism(4)]
 
 [assembly: ComVisible(false)]
 
