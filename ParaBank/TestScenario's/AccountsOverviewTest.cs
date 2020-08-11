@@ -7,7 +7,7 @@ namespace ParaBank
     [TestFixture]
     [Parallelizable]
     [Category("Accounts Overview Test Cases")]
-    [Category("Regresstion Tests")]
+    [Category("Regression Tests")]
     public class AccountsOverviewTest : BaseTest
     {
         [Description("Verify Page Header")]
