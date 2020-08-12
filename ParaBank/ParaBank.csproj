@@ -81,6 +81,7 @@
     <Compile Include="TestScenario%27s\AccountsOverviewTest.cs" />
     <Compile Include="TestScenario%27s\TransferFundsTests.cs" />
     <Compile Include="PageObjects\TransferFundsApplicationPage.cs" />
+    <Compile Include="TestScenario%27s\AdminPageTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

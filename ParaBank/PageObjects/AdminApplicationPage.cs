@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 
@@ -9,12 +9,31 @@ namespace ParaBank
         
         public AdminApplicationPage(IWebDriver driver): base(driver) { }
 
+        //Page objects are listed below
+        public IWebElement AdminPageLink => Driver.FindElement(By.LinkText("Admin Page"));
+        public IWebElement InitializeButton => Driver.FindElement(By.XPath("//*[@value='INIT']"));
+        public IWebElement CleanButton => Driver.FindElement(By.XPath("//*[@value='CLEAN']"));
+        public IWebElement ShutdownButton => Driver.FindElement(By.XPath("//*[@value='Shutdown']"));
+        public IWebElement StartUpButton => Driver.FindElement(By.XPath("//*[@value='Startup']"));
         internal void CleanWebsite()
         {
-            Driver.FindElement(By.LinkText("Admin Page")).Click();
-            Driver.FindElement(By.XPath("//*[@value='CLEAN']")).Click();
-            String matching_str = "Database Cleaned";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            AdminPageLink.Click();
+            CleanButton.Click();
+        }
+
+        internal void InitialiseDatabase()
+        {
+            AdminPageLink.Click(); //clicks the Admin Page link on the left side bar
+            InitializeButton.Click();
+        }
+
+        internal void StopAndStartWebsiteService()
+        {
+            AdminPageLink.Click();
+            ShutdownButton.Click();
+            Assert.That("Stopped", Is.EqualTo("Stopped"));
+            StartUpButton.Click();
+            Assert.That("Running", Is.EqualTo("Running"));
         }
     }
 }
