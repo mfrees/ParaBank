@@ -64,10 +64,10 @@
     <Compile Include="PageObjects\AccountsOverviewApplicationPage.cs" />
     <Compile Include="PageObjects\AdminApplicationPage.cs" />
     <Compile Include="PageObjects\BaseApplicationPage.cs" />
-    <Compile Include="PageObjects\InvalidLoginUser.cs" />
+    <Compile Include="TestData\InvalidLoginUser.cs" />
     <Compile Include="PageObjects\LoginApplicationPage.cs" />
-    <Compile Include="PageObjects\ValidLoginUser.cs" />
-    <Compile Include="PageObjects\PayeeInformation.cs" />
+    <Compile Include="TestData\ValidLoginUser.cs" />
+    <Compile Include="TestData\PayeeInformation.cs" />
     <Compile Include="TestScenario%27s\BaseTest.cs" />
     <Compile Include="TestScenario%27s\LoginPageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,7 +77,7 @@
     <Compile Include="TestScenario%27s\OpenNewAccount.cs" />
     <Compile Include="TestScenario%27s\BillPaymentTest.cs" />
     <Compile Include="TestScenario%27s\BaseTest1.cs" />
-    <Compile Include="PageObjects\RegisterUserInformation.cs" />
+    <Compile Include="TestData\RegisterUserInformation.cs" />
     <Compile Include="TestScenario%27s\AccountsOverviewTest.cs" />
     <Compile Include="TestScenario%27s\TransferFundsTests.cs" />
     <Compile Include="PageObjects\TransferFundsApplicationPage.cs" />
