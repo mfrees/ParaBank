@@ -1,8 +1,9 @@
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csprojAssemblyReference.cache
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\chromedriver.exe
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\NLog.config
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\mongocrypt.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.dll.config
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.dll
@@ -10,7 +11,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.pdb
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\AutomationResources.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Crc32C.NET.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\DnsClient.dll
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ExtentReports.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.AspNetCore.Authentication.Core.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.dll
@@ -74,7 +74,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\MongoDB.Driver.Co
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\MongoDB.Driver.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\MongoDB.Libmongocrypt.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\NLog.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.framework.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\RazorEngine.NetCore.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\SharpCompress.dll
@@ -164,7 +163,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\MongoDB.Bson.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\MongoDB.Driver.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\NLog.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.framework.pdb
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.framework.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Snappy.NET.xml
@@ -180,8 +178,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\System.Text.Encod
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\WebDriver.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\WebDriver.Support.xml
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csprojAssemblyReference.cache
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CopyComplete
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.pdb
