@@ -1,5 +1,3 @@
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csprojAssemblyReference.cache
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -182,6 +180,8 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\System.Text.Encod
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\WebDriver.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\WebDriver.Support.xml
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csprojAssemblyReference.cache
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CopyComplete
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.pdb

@@ -12,6 +12,7 @@ C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\Micros
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\WebDriver.xml
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\WebDriver.Support.xml
+C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csprojAssemblyReference.cache
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csproj.CopyComplete
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.dll
