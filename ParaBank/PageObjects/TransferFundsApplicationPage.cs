@@ -5,7 +5,7 @@ namespace ParaBank
 {
     internal class TransferFundsApplicationPage : BaseApplicationPage
     {
-        private IWebDriver driver;
+       
 
         public TransferFundsApplicationPage(IWebDriver driver) :base(driver) { }
 
