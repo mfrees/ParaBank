@@ -10,6 +10,7 @@ namespace ParaBank
     [Category("Regression Tests"), Category("Text Fields")]
     public class BillPaymentTest : BaseTest
     {
+        [Author("Michael Rees")]
         [Test]
         public void EnterPayeeInfo()
         {
