@@ -43,6 +43,7 @@ namespace ParaBank
             LastName.SendKeys("Jones");
             UpdateProfileButton.Click();
             UpdateContactInfoLinkText.Click();
+            Thread.Sleep(2000);
             FirstName.Clear();
             FirstName.SendKeys("John");
             LastName.Clear();
