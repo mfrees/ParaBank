@@ -9,6 +9,17 @@ namespace ParaBank
     [Category("Regression Tests")]
     public class UpdateContactInformationTest : BaseTest
     {
+        [Description("Change first name and last name then save and revert data to original")]
+        [Test]
+        public void ChangeFirstAndLastName()
+        {
+            var updatecontactinformationpage = new UpdateContactInformationPage(Driver);
+            updatecontactinformationpage.ChangeFirstAndLastNameThenRevert();
+
+            Assert.That("Profile Updated", Is.EqualTo("Profile Updated"));
+            Assert.That("Your updated address and phone number have been added to the system.", Is.EqualTo("Your updated address and phone number have been added to the system."));
+        }
+
         [Description("Clears all fields and asserts correct mandatory alerts are displayed")]
         [Author("Michael Rees")]
         [Test]

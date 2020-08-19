@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using System;
+using System.Threading;
 
 namespace ParaBank
 {
@@ -12,6 +13,7 @@ namespace ParaBank
         public IWebElement FirstName => Driver.FindElement(By.Id("customer.firstName"));
         public IWebElement LastName => Driver.FindElement(By.Id("customer.lastName"));
         public IWebElement Address => Driver.FindElement(By.Id("customer.address.street"));
+
         public IWebElement City => Driver.FindElement(By.Id("customer.address.city"));
         public IWebElement State => Driver.FindElement(By.Id("customer.address.state"));
         public IWebElement ZipCode => Driver.FindElement(By.Id("customer.address.zipCode"));
@@ -29,6 +31,22 @@ namespace ParaBank
             State.Clear();
             ZipCode.Clear();
             Phone.Clear();
+            UpdateProfileButton.Click();
+        }
+        internal void ChangeFirstAndLastNameThenRevert()
+        {
+            UpdateContactInfoLinkText.Click();
+            Thread.Sleep(2000);
+            FirstName.Clear();
+            FirstName.SendKeys("David");
+            LastName.Clear();
+            LastName.SendKeys("Jones");
+            UpdateProfileButton.Click();
+            UpdateContactInfoLinkText.Click();
+            FirstName.Clear();
+            FirstName.SendKeys("John");
+            LastName.Clear();
+            LastName.SendKeys("Smith");
             UpdateProfileButton.Click();
         }
     }
