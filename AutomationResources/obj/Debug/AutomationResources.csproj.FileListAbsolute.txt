@@ -8,7 +8,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\nunit.
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\nunit.framework.xml
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\WebDriver.xml
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\WebDriver.Support.xml
-C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csprojAssemblyReference.cache
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csproj.CopyComplete
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.dll
