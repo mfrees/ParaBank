@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 
 namespace ParaBank
@@ -26,6 +27,12 @@ namespace ParaBank
             AmountField.Clear(); //clears the amount field
             AmountField.SendKeys("test"); //enters characters in the amount field
             TransferButton.Click(); //clicks the transfer button
+        }
+
+        internal void VerifySubHeaderAndFieldLabelText()
+        {
+            TransferFundsLinkText.Click();
+           
         }
     }
 }
