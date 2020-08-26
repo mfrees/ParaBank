@@ -10,7 +10,7 @@ namespace ParaBank
     [Category("Open New Account")]
     public class OpenNewAccount : BaseTest
     {
-        [Description("Opens a new bank  savings account")]
+        [Description("Opens a new bank savings account")]
         [Author("Michael Rees")]
         [Category("Regression Tests")]
         [Test]
@@ -31,14 +31,22 @@ namespace ParaBank
             opennewaccountapplicationpage.ApplyAndOpenNewCheckingAccount();
             Assert.That("Account Opened!", Is.EqualTo("Account Opened!"));
         }
-        [Description("Verify the page header")]
+        [Description("Verify the page text.")]
         [Category("Regression Tests")]
         [Author("Michael Rees")]
         [Test]
-        public void PageHeader()
+        public void VerifiesPageText()
         {
             var opennewaccountapplicationpage = new OpenNewAccountApplicationPage(Driver);
-            opennewaccountapplicationpage.VerifyPageHeader();
+            opennewaccountapplicationpage.VerifyPageText();
+        }
+        [Description("Verify that the Open New Account button is enabled.")]
+        [Category("Regression Tests")]
+        [Test]
+        public void VerifyButtonIsEnabled()
+        {
+            var opennewaccountapplicationpage = new OpenNewAccountApplicationPage(Driver);
+            opennewaccountapplicationpage.VerifyButtonIsDisplayed();
         }
     }
 }
