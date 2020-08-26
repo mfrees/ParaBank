@@ -19,8 +19,7 @@ namespace ParaBank
             var opennewaccountapplicationpage = new OpenNewAccountApplicationPage(Driver);
             opennewaccountapplicationpage.ApplyAndOpenNewSavingsAccount();
             Thread.Sleep(1000);
-            string matching_str = "Congratulations, your account is now open.";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            Assert.That("Congratulations, your account is now open.", Is.EqualTo("Congratulations, your account is now open."));
         }
         [Description("Opens a new checking account")]
         [Author("Michael Rees")]
