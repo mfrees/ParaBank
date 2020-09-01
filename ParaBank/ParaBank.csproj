@@ -74,8 +74,8 @@
     <Compile Include="TestScenario%27s\TransferFundsTests.cs" />
     <Compile Include="PageObjects\TransferFundsApplicationPage.cs" />
     <Compile Include="TestScenario%27s\AdminPageTest.cs" />
-    <Compile Include="UpdateContactInformationTest.cs" />
-    <Compile Include="UpdateContactInformationPage.cs" />
+    <Compile Include="TestScenario%27s\UpdateContactInformationTest.cs" />
+    <Compile Include="PageObjects\UpdateContactInformationPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
