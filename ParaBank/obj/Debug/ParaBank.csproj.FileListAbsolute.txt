@@ -4,9 +4,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\NUnit3.TestAdapte
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.engine.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.engine.api.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.engine.core.dll
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.dll.config
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.dll
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.pdb
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\AutomationResources.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.framework.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\WebDriver.dll
@@ -21,3 +18,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.C
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CopyComplete
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.pdb
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.dll.config
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.dll
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\ParaBank.pdb

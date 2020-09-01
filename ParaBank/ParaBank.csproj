@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerLookupPage.cs" />
     <Compile Include="PageObjects\BillPaymentServicePage.cs" />
     <Compile Include="PageObjects\AccountsOverviewApplicationPage.cs" />
     <Compile Include="PageObjects\AdminApplicationPage.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="TestScenario%27s\AdminPageTest.cs" />
     <Compile Include="TestScenario%27s\UpdateContactInformationTest.cs" />
     <Compile Include="PageObjects\UpdateContactInformationPage.cs" />
+    <Compile Include="CustomerLookUpTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
