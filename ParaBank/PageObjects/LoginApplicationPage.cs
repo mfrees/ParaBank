@@ -21,7 +21,6 @@ namespace ParaBank
             internal set { }
         }
 
-        //public object InvalidUsernameAndPasswordError { get; internal set; }
 
         //below are the list of properties
         public IWebElement Username => Driver.FindElement(By.Name("username"));
