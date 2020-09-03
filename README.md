@@ -8,7 +8,8 @@ My reasons for creating the project are for learning and improving my Selenium a
 
 **Technology/Framework**
 
-*Technology Used : C#, NUnit, Selenium, Visual Studio*
+*Technology Used: C#, NUnit, Selenium, Visual Studio*
+
 *Framework Used: Page Object Model*
 
 **Coding Style:**
