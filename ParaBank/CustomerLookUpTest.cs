@@ -40,13 +40,19 @@ namespace ParaBank
             var customerlookuppage = new CustomerLookupPage(Driver);
             customerlookuppage.VerifyMandatoryFieldWarnings();
 
-            Assert.That("First name is required.", Is.EqualTo("First name is required."));
-            Assert.That("Last name is required.", Is.EqualTo("Last name is required."));
-            Assert.That("Address is required.", Is.EqualTo("Address is required."));
-            Assert.That("City is required.", Is.EqualTo("City is required."));
-            Assert.That("State is required.", Is.EqualTo("State is required."));
-            Assert.That("Zip Code is required.", Is.EqualTo("Zip Code is required."));
-            Assert.That("Social Security Number is required.", Is.EqualTo("Social Security Number is required."));
+            //One assertion per test rule is fine for unit tests, however as we progress up the testing stack there will be a need for multiple assertions.
+            Assert.Multiple(testDelegate: () =>
+             {
+                 Assert.That("First name is required.", Is.EqualTo("First name is required."));
+                 Assert.That("Last name is required.", Is.EqualTo("Last name is required."));
+                 Assert.That("Address is required.", Is.EqualTo("Address is required."));
+                 Assert.That("City is required.", Is.EqualTo("City is required."));
+                 Assert.That("State is required.", Is.EqualTo("State is required."));
+                 Assert.That("Zip Code is required.", Is.EqualTo("Zip Code is required."));
+                 Assert.That("Social Security Number is required.", Is.EqualTo("Social Security Number is required."));
+             });
+
+            
         }
         
     }
