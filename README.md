@@ -1,5 +1,5 @@
 **ParaBank:**
-Automation framework for a web based banking application.
+Automation framework for a web based banking application. ParaBank is a website which has been set up for testing purposes.
 
 **Motivation:**
 My reasons for creating the project are for learning and improving my Selenium automation skills.
@@ -8,15 +8,15 @@ My reasons for creating the project are for learning and improving my Selenium a
 
 **Technology/Framework**
 
-*Technology Used : C#, NUnit, Selenium, Visual Studio
-*Framework Used: Page Object Model
+*Technology Used : C#, NUnit, Selenium, Visual Studio*
+*Framework Used: Page Object Model*
 
 **Coding Style:**
 
 **Features:** 
 
 **Code Example:**
-*The following is the test case class which has the test cases for trhe feature.*
+*The following example is a test case class which has the test case linked to a specific feature.*
 
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -37,7 +37,9 @@ namespace ParaBank
             transferfundsapplicationpage.TransferWithNoAmount();
             Assert.That("The amount cannot be empty.", Is.EqualTo("The amount cannot be empty."));
         }
+
 *Please see below for the corresponding page object class.*
+
 using NUnit.Framework;
 using OpenQA.Selenium;
 
@@ -53,6 +55,7 @@ namespace ParaBank
         public IWebElement TransferFundsLinkText => Driver.FindElement(By.LinkText("Transfer Funds"));
         public IWebElement TransferButton => Driver.FindElement(By.XPath("//*[@type='submit']"));
         public IWebElement AmountField => Driver.FindElement(By.Id("amount"));
+
         internal void TransferWithNoAmount()
         {
             TransferFundsLinkText.Click(); //clicks the Transfer Funds link text from left hand menu panel
