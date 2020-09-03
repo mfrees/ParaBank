@@ -6,6 +6,8 @@ using System;
 namespace ParaBank
 {
     [TestFixture]
+    [Parallelizable]
+    [Category("Regression Tests")]
     public class CustomerLookUpTest : BaseTest1
     {
         [Description("Verifies the page sub heading.")]
