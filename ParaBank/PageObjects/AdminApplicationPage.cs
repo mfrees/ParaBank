@@ -15,6 +15,8 @@ namespace ParaBank
         public IWebElement CleanButton => Driver.FindElement(By.XPath("//*[@value='CLEAN']"));
         public IWebElement ShutdownButton => Driver.FindElement(By.XPath("//*[@value='Shutdown']"));
         public IWebElement StartUpButton => Driver.FindElement(By.XPath("//*[@value='Startup']"));
+
+        //Methods below this point
         internal void CleanWebsite()
         {
             AdminPageLink.Click();
@@ -29,6 +31,7 @@ namespace ParaBank
 
         internal void StopAndStartWebsiteService()
         {
+            //Assertions need to stay in here for this one as its easier to stop and start the service from the same method.
             AdminPageLink.Click();
             ShutdownButton.Click();
             Assert.That("Stopped", Is.EqualTo("Stopped"));
