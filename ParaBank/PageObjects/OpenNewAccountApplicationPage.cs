@@ -33,15 +33,11 @@ namespace ParaBank
         internal void VerifyPageText()
         {
             OpenNewAccountLinkText.Click();
-            Assert.That("Open New Account", Is.EqualTo("Open New Account")); //page sub header
-            Assert.That("What type of Account would you like to open?", Is.EqualTo("What type of Account would you like to open?")); //question 1
-            Assert.That("A minimum of $100.00 must be deposited into this account at time of opening. Please choose an existing account to transfer funds into the new account.", Is.EqualTo("A minimum of $100.00 must be deposited into this account at time of opening. Please choose an existing account to transfer funds into the new account.")); //question 2&3
         }
 
         internal void VerifyButtonIsDisplayed()
         {
             OpenNewAccountLinkText.Click();
-            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@value='Open New Account']")).Enabled);
         }
     }
 }
