@@ -14,13 +14,12 @@ namespace ParaBank
         [Author("Michael Rees")]
         [Category("Regression Tests"), Category("Dropdown Lists")]
         [Test]
-        public void ApplyForaLoan()
+        public void ApplyForALoan()
         {
             var requestloanapplicationpage = new RequestLoanApplicationPage(Driver);
             requestloanapplicationpage.ApplyAndSubmitLoanRequest("2000", "500");
             Thread.Sleep(1000);
-            string matching_str = "Congratulations, your loan has been approved.";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            Assert.That("Congratulations, your loan has been approved.", Is.EqualTo("Congratulations, your loan has been approved."));
         }
         [Description("Loan Amount and Down Payment fields not populated")]
         [Author("Michael Rees")]
@@ -31,8 +30,7 @@ namespace ParaBank
             var requestloanapplicationpage = new RequestLoanApplicationPage(Driver);
             requestloanapplicationpage.MandatoryFieldsCheck();
             Thread.Sleep(1000);
-            string matching_str = "An internal error has occurred and has been logged.";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            Assert.That("An internal error has occurred and has been logged.", Is.EqualTo("An internal error has occurred and has been logged."));
         }
 
     }

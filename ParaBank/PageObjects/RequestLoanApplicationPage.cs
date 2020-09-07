@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
 using System.Threading;
 
 namespace ParaBank
@@ -15,6 +14,8 @@ namespace ParaBank
         public IWebElement DownPaymentField => Driver.FindElement(By.Id("downPayment"));
         public IWebElement ApplyNowButton => Driver.FindElement(By.XPath("//*[@value='Apply Now']"));
 
+        //Methods below this point
+
 
         internal void ApplyAndSubmitLoanRequest(string loanAmount, string downPayment)
         {
@@ -26,9 +27,9 @@ namespace ParaBank
 
         internal void MandatoryFieldsCheck()
         {
-            RequestLoanLink.Click();
-            Thread.Sleep(1000);
-            ApplyNowButton.Click();
+            RequestLoanLink.Click(); //clicks the requests loan link
+            Thread.Sleep(1000); //Wait
+            ApplyNowButton.Click(); //clicks the apply now button
         }
     }
 }
