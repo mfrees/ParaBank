@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
 
 
 namespace ParaBank
@@ -10,14 +9,18 @@ namespace ParaBank
     [Category("Regression Tests")]
     public class CustomerLookUpTest : BaseTest1
     {
+        [Description("This is run before every test in this class but after the BaseTest1")]
+        [SetUp]
+        public void RunBeforeTest()
+        {
+            var customerlookuppage = new CustomerLookupPage(Driver);
+            customerlookuppage.NavigateToPage();
+        }
         [Description("Verifies the page sub heading.")]
         [Author("Michael Rees")]
         [Test]
         public void VerifyPageText()
         {
-            var customerlookuppage = new CustomerLookupPage(Driver);
-            customerlookuppage.VerifyPageText();
-
             Assert.Multiple(testDelegate: () =>
             {
                 Assert.That("Customer Lookup", Is.EqualTo("Customer Lookup"));
@@ -53,6 +56,25 @@ namespace ParaBank
                  Assert.That("Social Security Number is required.", Is.EqualTo("Social Security Number is required."));
              });
         }
-        
+        [Description("Completes the form and submits then verifies the internal error message")]
+        [Author("Michael Rees")]
+        [Test]
+        public void VerifyErrorMessage()
+        {
+            var customerlookupdetails = new CustomerLookupDetails();
+            customerlookupdetails.FirstName = "John";
+            customerlookupdetails.LastName = "Smith";
+            customerlookupdetails.Address = "1431 Main St";
+            customerlookupdetails.City = "Beverly Hills";
+            customerlookupdetails.State = "CA";
+            customerlookupdetails.ZipCode = "90210";
+            customerlookupdetails.SSN = "310-447-4121";
+
+            var customerlookuppage = new CustomerLookupPage(Driver);
+            customerlookuppage.CompleteFormAndSubmit(customerlookupdetails);
+
+            Assert.That("Error!", Is.EqualTo("Error!"));
+            Assert.That("An internal error has occurred and has been logged.", Is.EqualTo("An internal error has occurred and has been logged."));
+        }
     }
 }
