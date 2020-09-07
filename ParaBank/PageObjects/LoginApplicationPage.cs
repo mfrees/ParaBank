@@ -40,6 +40,8 @@ namespace ParaBank
         public IWebElement RegisterPasswordConfirm => Driver.FindElement(By.Id("repeatedPassword"));
         public IWebElement RegisterButton => Driver.FindElement(By.XPath("//*[@value='Register']"));
 
+        //Methods below this
+
         internal void RegisterNewUserAndSubmit(RegisterUserInformation registeruserinformation)
         {
             RegisterLinkText.Click(); //clicks ths register link

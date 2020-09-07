@@ -9,6 +9,7 @@ namespace ParaBank
     [Category("LoginPageTests"), Category("Regression Tests")]
     public class LoginPageTests : BaseTest1  //BaseTest1 is the use of inheritance (parent and child setup) which holds the setup and teardown and the driver 
     {
+
         [Description("This test case registers a new user.")]
         [Author("Michael Rees")]
         [Test]
@@ -33,8 +34,7 @@ namespace ParaBank
             var adminApplicationPage = new AdminApplicationPage(Driver);
             adminApplicationPage.CleanWebsite();
             loginApplicationPage.RegisterNewUserAndSubmit(registeruserinformation);
-            string matching_str = "Your account was created successfully. You are now logged in.";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            Assert.That("Your account was created successfully. You are now logged in.", Is.EqualTo("Your account was created successfully. You are now logged in."));
         }
         [Description("This test verifies that a user can log into the application")]
         [Author("MichaelRees")]
@@ -64,8 +64,8 @@ namespace ParaBank
             loginApplicationPage.GoTo();
 
             loginApplicationPage.EnterInvalidCredentialsAndSubmit(invalidloginuser);
-            String matching_str = "The username and password could not be verified.";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            
+            Assert.That("The username and password could not be verified.", Is.EqualTo("The username and password could not be verified."));
         }
         [Description("Test clicks on the login button without any credentials popuated and validates correct error message is displayed.")]
         [Author("Michael Rees")]
