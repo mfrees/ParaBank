@@ -10,6 +10,7 @@ namespace ParaBank
     {
         [Description("Initialise Database and verify alert message")]
         [Author("Michael Rees")]
+        [Explicit("This has a big impact on the database and I only want to run this test when I specifically choose to.")]
         [Test]
         public void InitializeDatabase()
         {
@@ -19,7 +20,8 @@ namespace ParaBank
             Assert.That("Database Initialized", Is.EqualTo("Database Initialized"));
         }
         [Description("Cleans the database and verifies alert message")]
-        [Author("Michael Rees")]
+        [Author("Michael Rees", "email can go here")]
+        [Explicit("This has a big impact on the database and I only want to run this test when I specifically choose to.")]
         [Test]
         public void CleanDatabase()
         {
@@ -28,6 +30,9 @@ namespace ParaBank
 
             Assert.That("Database Cleaned", Is.EqualTo("Database Cleaned"));
         }
+        [Description("Stops and starts the JMS service.")]
+        [Author("Michael Rees", "email")]
+        [Explicit("This has a big impact on the database and I only want to run this test when I specifically choose to.")]
         [Test]
         public void StopAndStartService()
         {
