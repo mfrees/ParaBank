@@ -32,7 +32,7 @@ namespace ParaBank
             Thread.Sleep(2000);
             Assert.That("Bill Payment to William Davies in the amount of $10.00", Is.EqualTo("Bill Payment to William Davies in the amount of $10.00"));
         }
-        [Description("Payee Name field not populated")]
+        [Description("Click Sending Payment button with no fields populated to test mandatory field warnings.")]
         [Author("Michael Rees")]
         [Test]
         public void TextAndMandatoryFieldWarnings()
@@ -50,6 +50,22 @@ namespace ParaBank
             Assert.That("Phone number is required.", Is.EqualTo("Phone number is required.")); //Verifies the Phone mandatory field warning
             Assert.That("Account number is required.", Is.EqualTo("Account number is required.")); //Verifies the Account mandatory field warning
             Assert.That("The amount cannot be empty. ", Is.EqualTo("The amount cannot be empty. ")); //Verifies the Amount field mandatory field warning
+        }
+        [Description("Entering text in numeric fields and cliking Send Payment button")]
+        [Author("Michael Rees")]
+        [Test]
+        public void TextInNumericFields()
+        {
+            var payeeinformation = new PayeeInformation();
+            payeeinformation.Phone = "text";
+            payeeinformation.Account = "text";
+            payeeinformation.VerifyAccount = "text";
+            payeeinformation.Amount = "text";
+
+            var billpaymentservicepage = new BillPaymentServicePage(Driver);
+            billpaymentservicepage.EnterTextInNumericFields(payeeinformation);
+
+            //Assertions to follow here
         }
     }
 }

@@ -42,5 +42,19 @@ namespace ParaBank
             BillPayLinkText.Click(); //clicks the bill pay link text
             SendPaymentButton.Click(); //clicks the send payment button
         }
+
+        internal void EnterTextInNumericFields(PayeeInformation payeeInformation)
+        {
+            BillPayLinkText.Click(); //clicks the bill pay link text
+            PhoneField.Clear();
+            PhoneField.SendKeys(payeeInformation.Phone);
+            AccountField.Clear();
+            AccountField.SendKeys(payeeInformation.Account);
+            VerifyAccountField.Clear();
+            VerifyAccountField.SendKeys(payeeInformation.VerifyAccount);
+            AmountField.Clear();
+            AmountField.SendKeys(payeeInformation.Amount);
+
+        }
     }
 }
