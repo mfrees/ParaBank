@@ -14,6 +14,8 @@ namespace ParaBank
         public IWebElement TransferFundsLinkText => Driver.FindElement(By.LinkText("Transfer Funds"));
         public IWebElement TransferButton => Driver.FindElement(By.XPath("//*[@type='submit']"));
         public IWebElement AmountField => Driver.FindElement(By.Id("amount"));
+
+        //Methods below this point
         internal void TransferWithNoAmount()
         {
             TransferFundsLinkText.Click(); //clicks the Transfer Funds link text from left hand menu panel
