@@ -37,7 +37,7 @@ namespace ParaBank
             SendPaymentButton.Click(); //clicks the send payment button
         }
 
-        internal void PayeeNameMandatoryField()
+        internal void TextAndFieldMandatoryFieldWarnings()
         {
             BillPayLinkText.Click(); //clicks the bill pay link text
             SendPaymentButton.Click(); //clicks the send payment button

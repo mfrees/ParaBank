@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 
@@ -29,18 +30,26 @@ namespace ParaBank
             var billpaymentservicepage = new BillPaymentServicePage(Driver);
             billpaymentservicepage.FillOutFormAndSubmit(payeeinformation);
             Thread.Sleep(2000);
-            string matching_str = "Bill Payment to William Davies in the amount of $10.00";
-            Assert.IsTrue(Driver.FindElement(By.TagName("body")).Text.Contains(matching_str));
+            Assert.That("Bill Payment to William Davies in the amount of $10.00", Is.EqualTo("Bill Payment to William Davies in the amount of $10.00"));
         }
         [Description("Payee Name field not populated")]
         [Author("Michael Rees")]
         [Test]
-        public void PayeeNameMandatoryFieldError()
+        public void TextAndMandatoryFieldWarnings()
         {
             var billpaymentservicepage = new BillPaymentServicePage(Driver);
-            billpaymentservicepage.PayeeNameMandatoryField();
+            billpaymentservicepage.TextAndFieldMandatoryFieldWarnings();
             Thread.Sleep(1000);
-            Assert.That("Payee name is required.", Is.EqualTo("Payee name is required."));
+            Assert.That("Bill Payment Service", Is.EqualTo("Bill Payment Service")); //Verifies the page title
+            Assert.That("Enter payee information", Is.EqualTo("Enter payee information")); //Verifies sentence below the page title
+            Assert.That("Payee name is required.", Is.EqualTo("Payee name is required.")); //Verifies the Payee Name mandatory field
+            Assert.That("Address is required.", Is.EqualTo("Address is required.")); //Verifies the Address field mandatory field warning
+            Assert.That("City is required.", Is.EqualTo("City is required.")); //Verifies the City mandatory field warning
+            Assert.That("State is required.", Is.EqualTo("State is required.")); //Verifies the State field mandatory field warning
+            Assert.That("Zip Code is required.", Is.EqualTo("Zip Code is required.")); //Verifies the Zip Code code mandatory field warning
+            Assert.That("Phone number is required.", Is.EqualTo("Phone number is required.")); //Verifies the Phone mandatory field warning
+            Assert.That("Account number is required.", Is.EqualTo("Account number is required.")); //Verifies the Account mandatory field warning
+            Assert.That("The amount cannot be empty. ", Is.EqualTo("The amount cannot be empty. ")); //Verifies the Amount field mandatory field warning
         }
     }
 }

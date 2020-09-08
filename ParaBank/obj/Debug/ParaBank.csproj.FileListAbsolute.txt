@@ -1,3 +1,5 @@
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csprojAssemblyReference.cache
+C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\chromedriver.exe
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\NUnit3.TestAdapter.pdb
@@ -16,8 +18,6 @@ C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.framework.p
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\nunit.framework.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\WebDriver.xml
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\bin\Debug\WebDriver.Support.xml
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csprojAssemblyReference.cache
-C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CoreCompileInputs.cache
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.csproj.CopyComplete
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.dll
 C:\Users\Michael Rees\source\repos\ParaBank\ParaBank\obj\Debug\ParaBank.pdb
