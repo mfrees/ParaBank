@@ -4,7 +4,7 @@ Automation framework for a web based banking application. ParaBank is a website 
 
 **Motivation:**
 
-The sole purpose for this project is to keep my automation skills, fresh, relevant and trying out new things. 
+The sole purpose for this project is to keep my automation skills, fresh, relevant and learning new skills.
 
 **Build Status:**
 In Progress.
@@ -16,23 +16,31 @@ In Progress.
 *Framework Used: Page Object Model*
 
 **Features:** 
+
 In Progress.
 
 **Code Example:**
+
 In Progress.
 
 **Installation:**
 
 The following will be needed to run the project:
 
-*-Visual Studio or Visual Studio Code*
-*-Nunit*
-*-Nunit.ConsoleRunner*
-*-Nunit3TestAdapter*
-*-Selenium.WebDriver*
-*-Selenium.Support*
+*1.Visual Studio or Visual Studio Code*
+
+*2.Nunit*
+
+*3.Nunit.ConsoleRunner*
+
+*4.Nunit3TestAdapter*
+
+*5.Selenium.WebDriver*
+
+*6.Selenium.Support*
 
 **Tests:**
+
 In Progress.
 
 
