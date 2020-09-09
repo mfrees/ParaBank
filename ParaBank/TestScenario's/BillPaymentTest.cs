@@ -66,6 +66,8 @@ namespace ParaBank
             billpaymentservicepage.EnterTextInNumericFields(payeeinformation);
 
             //Assertions to follow here
+            Assert.That("Please enter a valid number.", Is.EqualTo("Please enter a valid number."));
+            Assert.That("Please enter a valid amount.", Is.EqualTo("Please enter a valid amount."));
         }
     }
 }
