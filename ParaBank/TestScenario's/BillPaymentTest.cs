@@ -11,6 +11,9 @@ namespace ParaBank
     [Category("Regression Tests"), Category("Text Fields")]
     public class BillPaymentTest : BaseTest
     {
+        internal BillPaymentServicePage BillPaymentServicePage { get; private set; } //Property for creating the BillPaymentServicePage in the setup
+
+        
         [Author("Michael Rees")]
         [Test]
         public void EnterPayeeInfo()
@@ -26,9 +29,7 @@ namespace ParaBank
             payeeinformation.VerifyAccount = "81779855";
             payeeinformation.Amount = "10.00";
 
-            
-            var billpaymentservicepage = new BillPaymentServicePage(Driver);
-            billpaymentservicepage.FillOutFormAndSubmit(payeeinformation);
+            BillPaymentServicePage.FillOutFormAndSubmit(payeeinformation);
             Thread.Sleep(2000);
             Assert.That("Bill Payment to William Davies in the amount of $10.00", Is.EqualTo("Bill Payment to William Davies in the amount of $10.00"));
         }
@@ -37,8 +38,7 @@ namespace ParaBank
         [Test]
         public void TextAndMandatoryFieldWarnings()
         {
-            var billpaymentservicepage = new BillPaymentServicePage(Driver);
-            billpaymentservicepage.TextAndFieldMandatoryFieldWarnings();
+            BillPaymentServicePage.TextAndFieldMandatoryFieldWarnings();
             Thread.Sleep(1000);
             Assert.That("Bill Payment Service", Is.EqualTo("Bill Payment Service")); //Verifies the page title
             Assert.That("Enter payee information", Is.EqualTo("Enter payee information")); //Verifies sentence below the page title
@@ -62,12 +62,17 @@ namespace ParaBank
             payeeinformation.VerifyAccount = "text";
             payeeinformation.Amount = "text";
 
-            var billpaymentservicepage = new BillPaymentServicePage(Driver);
-            billpaymentservicepage.EnterTextInNumericFields(payeeinformation);
+            BillPaymentServicePage.EnterTextInNumericFields(payeeinformation);
 
             //Assertions to follow here
             Assert.That("Please enter a valid number.", Is.EqualTo("Please enter a valid number."));
             Assert.That("Please enter a valid amount.", Is.EqualTo("Please enter a valid amount."));
+        }
+        [Description("Everything in here runs before each test but after the base test")]
+        [SetUp]
+        public void RunBeforeEachTest()
+        {
+            BillPaymentServicePage = new BillPaymentServicePage(Driver); //We are creating the BillPaymentServicePage here once rather than in evry test.
         }
     }
 }

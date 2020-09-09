@@ -15,8 +15,8 @@ namespace ParaBank
             var factory = new WebDriverFactory();
             Driver = factory.Create(BrowserType.Chrome);
 
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
+            //var loginApplicationPage = new LoginApplicationPage(Driver);
+            //loginApplicationPage.GoTo();
         }
 
         [TearDown]

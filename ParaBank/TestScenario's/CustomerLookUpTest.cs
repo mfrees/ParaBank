@@ -9,13 +9,8 @@ namespace ParaBank
     [Category("Regression Tests")]
     public class CustomerLookUpTest : BaseTest1
     {
-        [Description("This is run before every test in this class but after the BaseTest1")]
-        [SetUp]
-        public void RunBeforeTest()
-        {
-            var customerlookuppage = new CustomerLookupPage(Driver);
-            customerlookuppage.NavigateToPage();
-        }
+        internal CustomerLookupPage CustomerLookUpPage { get; private set; } //This property is linked to the page creation in the setup 
+
         [Description("Verifies the page sub heading.")]
         [Author("Michael Rees")]
         [Test]
@@ -40,8 +35,7 @@ namespace ParaBank
         [Test]
         public void VerifyManadtoryFieldAlerts()
         {
-            var customerlookuppage = new CustomerLookupPage(Driver);
-            customerlookuppage.VerifyMandatoryFieldWarnings();
+            CustomerLookUpPage.VerifyMandatoryFieldWarnings();
 
             //One assertion per test rule is fine for unit tests, however as we progress up the testing stack there will be a need for multiple assertions.
             //We use the Assert.Multiple and then pass a Lambda function which contains multiple assertion statements
@@ -70,11 +64,17 @@ namespace ParaBank
             customerlookupdetails.ZipCode = "90210";
             customerlookupdetails.SSN = "310-447-4121";
 
-            var customerlookuppage = new CustomerLookupPage(Driver);
-            customerlookuppage.CompleteFormAndSubmit(customerlookupdetails);
+            CustomerLookUpPage.CompleteFormAndSubmit(customerlookupdetails);
 
             Assert.That("Error!", Is.EqualTo("Error!"));
             Assert.That("An internal error has occurred and has been logged.", Is.EqualTo("An internal error has occurred and has been logged."));
+        }
+        [Description("This is run before every test in this class but after the BaseTest1")]
+        [SetUp]
+        public void RunBeforeTest()
+        {
+            CustomerLookUpPage = new CustomerLookupPage(Driver);
+            CustomerLookUpPage.NavigateToPage();
         }
     }
 }

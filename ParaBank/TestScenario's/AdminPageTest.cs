@@ -8,15 +8,15 @@ namespace ParaBank
     [Category("Radio Buttons"), Category("Regression Tests")]
     public class AdminPageTest :BaseTest1
     {
+        internal AdminApplicationPage AdminApplicationPage { get; private set; } //This property is linked to the creation of the AdminApplicationPage in the Setup
+
         [Description("Initialise Database and verify alert message")]
         [Author("Michael Rees")]
         [Explicit("This has a big impact on the database and I only want to run this test when I specifically choose to.")]
         [Test]
         public void InitializeDatabase()
         {
-            var adminapplicationpage = new AdminApplicationPage(Driver);
-            adminapplicationpage.InitialiseDatabase();
-
+            AdminApplicationPage.InitialiseDatabase();
             Assert.That("Database Initialized", Is.EqualTo("Database Initialized"));
         }
 
@@ -26,9 +26,7 @@ namespace ParaBank
         [Test]
         public void CleanDatabase()
         {
-            var adminapplicationpage = new AdminApplicationPage(Driver);
-            adminapplicationpage.CleanWebsite();
-
+            AdminApplicationPage.CleanWebsite();
             Assert.That("Database Cleaned", Is.EqualTo("Database Cleaned"));
         }
 
@@ -38,8 +36,13 @@ namespace ParaBank
         [Test]
         public void StopAndStartService()
         {
-            var adminapplicationpage = new AdminApplicationPage(Driver);
-            adminapplicationpage.StopAndStartWebsiteService();
+            AdminApplicationPage.StopAndStartWebsiteService();
+        }
+        [Description("Everything in here runs before each test but after BaseClass1")]
+        [SetUp]
+        public void RunBeforeEachTest()
+        {
+            AdminApplicationPage = new AdminApplicationPage(Driver);
         }
 
     }

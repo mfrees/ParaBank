@@ -9,6 +9,7 @@ namespace ParaBank
     [Category("LoginPageTests"), Category("Regression Tests")]
     public class LoginPageTests : BaseTest1  //BaseTest1 is the use of inheritance (parent and child setup) which holds the setup and teardown and the driver 
     {
+        internal LoginApplicationPage LoginApplicationPage { get; private set; } //This property is linked to the page creation of LoginApplicationPage in the Setup
 
         [Description("This test case registers a new user.")]
         [Author("Michael Rees")]
@@ -28,12 +29,10 @@ namespace ParaBank
             registeruserinformation.Password = "williams";
             registeruserinformation.ConfirmPassword = "williams";
 
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-
+            LoginApplicationPage.GoTo();
             var adminApplicationPage = new AdminApplicationPage(Driver);
             adminApplicationPage.CleanWebsite();
-            loginApplicationPage.RegisterNewUserAndSubmit(registeruserinformation);
+            LoginApplicationPage.RegisterNewUserAndSubmit(registeruserinformation);
             Assert.That("Your account was created successfully. You are now logged in.", Is.EqualTo("Your account was created successfully. You are now logged in."));
         }
         [Description("This test verifies that a user can log into the application")]
@@ -45,10 +44,8 @@ namespace ParaBank
             validloginuser.Username = "john";
             validloginuser.Password = "demo";
 
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
-            
-            var accountsOverviewApplicationPage = loginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
+            LoginApplicationPage.GoTo();
+            var accountsOverviewApplicationPage = LoginApplicationPage.EnterValidCredentialsAndLogin(validloginuser);
             Assert.IsTrue(accountsOverviewApplicationPage.IsVisible);
         }
         [Description("This test case verifies that when a user enters invalid credentials they can not log into the application")]
@@ -60,10 +57,9 @@ namespace ParaBank
             invalidloginuser.Username = "qwerty";
             invalidloginuser.Password = "12";
 
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
+            LoginApplicationPage.GoTo();
 
-            loginApplicationPage.EnterInvalidCredentialsAndSubmit(invalidloginuser);
+            LoginApplicationPage.EnterInvalidCredentialsAndSubmit(invalidloginuser);
             
             Assert.That("The username and password could not be verified.", Is.EqualTo("The username and password could not be verified."));
         }
@@ -72,10 +68,9 @@ namespace ParaBank
         [Test]
         public void ClickLoginButtonWithNoCredentials()
         {
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
+            LoginApplicationPage.GoTo();
 
-            loginApplicationPage.ClickLoginButtonWithoutUsernameAndPassword();
+            LoginApplicationPage.ClickLoginButtonWithoutUsernameAndPassword();
             Assert.That("Please enter a username and password.", Is.EqualTo("Please enter a username and password."));
         }
         [Description("Tests that the Login button is enabled.")]
@@ -83,8 +78,7 @@ namespace ParaBank
         [Test]
         public void VerifyLoginButtonEnabled()
         {
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
+            LoginApplicationPage.GoTo();
 
             Assert.IsTrue(Driver.FindElement(By.XPath("//*[@Type='submit']")).Enabled);
         }
@@ -93,8 +87,7 @@ namespace ParaBank
         [Test]
         public void ForgotLoginInfoLink()
         {
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
+            LoginApplicationPage.GoTo();
 
             Assert.IsTrue(Driver.FindElement(By.LinkText("Forgot login info?")).Enabled);
         }
@@ -103,10 +96,16 @@ namespace ParaBank
         [Test]
         public void VerifyRegisterLinkIsEnabled()
         {
-            var loginApplicationPage = new LoginApplicationPage(Driver);
-            loginApplicationPage.GoTo();
+            
+            LoginApplicationPage.GoTo();
 
             Assert.IsTrue(Driver.FindElement(By.LinkText("Register")).Enabled);
+        }
+        [Description("Everything here runs before each test but after the BaseTest1")]
+        [SetUp]
+        public void RunsBeforeEachTest()
+        {
+            LoginApplicationPage = new LoginApplicationPage(Driver);
         }
     }
 }
