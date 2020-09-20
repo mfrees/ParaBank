@@ -1,8 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
 using System.Threading;
-
 
 namespace ParaBank
 {
@@ -12,7 +10,20 @@ namespace ParaBank
     public class TransferFundsTests : BaseTest
     {
         internal TransferFundsApplicationPage TransferFundsApplicationPage { get; private set; } //This property is linked to the TransferFundsApplicationPage in the setup
+        [Test]
+        public void VerifyPageHeaderAndText()
+        {
+            TransferFundsApplicationPage.VerifySubHeaderAndFieldLabelText();
+            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@class='title']")).Displayed);
+            Assert.That("Transfer Funds", Is.EqualTo("Transfer Funds"));
+            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@class='ng-pristine ng-valid']//*[text()='Amount:']")).Displayed);
+            Assert.That("Amount", Is.EqualTo("Amount"));
+            //Assert.IsTrue(Driver.FindElement(By.XPath("")).Displayed);
+            Assert.That("From account #", Is.EqualTo("From account #"));
+            //Assert.IsTrue(Driver.FindElement(By.XPath("")).Displayed);
+            Assert.That("to account #", Is.EqualTo("to account #"));
 
+        }
         [Description("Clicking the Transfer button without amount")]
         [Author("Michael Rees")]
         [Test]
@@ -28,18 +39,6 @@ namespace ParaBank
         {
             TransferFundsApplicationPage.TransferWithCharacters();
             Assert.That("Please enter a valid amount.", Is.EqualTo("Please enter a valid amount."));
-        }
-        [Description("Verify sub header and field labels.")]
-        [Test]
-        public void VerifiesSubHeaderAndFieldLabels()
-        {
-            
-            TransferFundsApplicationPage.VerifySubHeaderAndFieldLabelText();
-            Assert.That("Apply for a Loan", Is.EqualTo("Apply for a Loan"));
-            Assert.That("Loan Amount:", Is.EqualTo("Loan Amount:"));
-            Assert.That("Down Payment:", Is.EqualTo("Down Payment:"));
-            Assert.That("From account #:", Is.EqualTo("From account #:"));
-            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@type='submit']")).Enabled);
         }
         [Description("Everything here runs before each test but after the BaseTest class")]
         [Author("Michael Rees")]
