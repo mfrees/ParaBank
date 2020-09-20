@@ -78,7 +78,7 @@
     <Compile Include="TestScenario%27s\UpdateContactInformationTest.cs" />
     <Compile Include="PageObjects\UpdateContactInformationPage.cs" />
     <Compile Include="TestScenario%27s\CustomerLookUpTest.cs" />
-    <Compile Include="CustomerLookupDetails.cs" />
+    <Compile Include="TestData\CustomerLookupDetails.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
