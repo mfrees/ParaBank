@@ -36,5 +36,21 @@ namespace ParaBank
             TransferFundsLinkText.Click();
            
         }
+
+        internal void SuccessfulTransfer()
+        {
+            TransferFundsLinkText.Click();
+            AmountField.Clear();
+            AmountField.SendKeys("1000");
+            TransferButton.Click();
+        }
+
+        internal void TransferValueToLarge()
+        {
+            TransferFundsLinkText.Click();
+            AmountField.Clear();
+            AmountField.SendKeys("12345678912345678912");
+            TransferButton.Click();
+        }
     }
 }
