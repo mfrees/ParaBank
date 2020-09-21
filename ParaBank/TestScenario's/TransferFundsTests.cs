@@ -14,15 +14,12 @@ namespace ParaBank
         public void VerifyPageHeaderAndText()
         {
             TransferFundsApplicationPage.VerifySubHeaderAndFieldLabelText();
-            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@class='title']")).Displayed);
-            Assert.That("Transfer Funds", Is.EqualTo("Transfer Funds"));
-            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@class='ng-pristine ng-valid']//*[text()='Amount:']")).Displayed);
-            Assert.That("Amount", Is.EqualTo("Amount"));
-            //Assert.IsTrue(Driver.FindElement(By.XPath("")).Displayed);
-            Assert.That("From account #", Is.EqualTo("From account #"));
-            //Assert.IsTrue(Driver.FindElement(By.XPath("")).Displayed);
-            Assert.That("to account #", Is.EqualTo("to account #"));
-
+            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@class='title']")).Displayed); //verifies Transfer Funds element is displayed
+            Assert.That("Transfer Funds", Is.EqualTo("Transfer Funds")); //verifies the Transfer Funds text is displayed as expected
+            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@class='ng-pristine ng-valid']//*[text()='Amount:']")).Displayed); //verified the Amount: element is displayed
+            Assert.That("Amount", Is.EqualTo("Amount")); //verifies the Amount text is displayed as expected
+            Assert.That("From account #", Is.EqualTo("From account #")); //verifies the From account # text is displayed as expected
+            Assert.That("to account #", Is.EqualTo("to account #")); //verifies the From account # text is displayed as expected
         }
         [Description("Clicking the Transfer button without amount")]
         [Author("Michael Rees")]
