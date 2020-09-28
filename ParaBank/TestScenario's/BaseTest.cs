@@ -13,6 +13,7 @@ namespace ParaBank
         public void SetupForEverySingleTestMethod()
         {
             var factory = new WebDriverFactory();
+            //Driver = factory.Create(BrowserType.Edge);
             Driver = factory.Create(BrowserType.Chrome);
 
             var validloginuser = new ValidLoginUser();

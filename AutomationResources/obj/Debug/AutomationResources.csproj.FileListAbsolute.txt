@@ -1,4 +1,5 @@
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\chromedriver.exe
+C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\msedgedriver.exe
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\bin\Debug\nunit.engine.dll
