@@ -97,7 +97,7 @@ namespace ParaBank
         {
             FindTransactionsApplicationPage.EnterTextInFindTransId("Test");
             //Start here
-            Assert.IsTrue(Driver.FindElement(By.XPath("")).Displayed); //verifies the page header is displayed
+            Assert.IsTrue(Driver.FindElement(By.XPath("//*[@class='title']")).Displayed); //verifies the page header is displayed
             Assert.That("An internal error has occurred and has been logged.", Is.EqualTo("An internal error has occurred and has been logged."));
         }
 
