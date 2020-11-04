@@ -52,7 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FindTransactionsApplicationPage.cs" />
+    <Compile Include="PageObjects\FindTransactionsApplicationPage.cs" />
     <Compile Include="PageObjects\CustomerLookupPage.cs" />
     <Compile Include="PageObjects\BillPaymentServicePage.cs" />
     <Compile Include="PageObjects\AccountsOverviewApplicationPage.cs" />
@@ -80,7 +80,7 @@
     <Compile Include="PageObjects\UpdateContactInformationPage.cs" />
     <Compile Include="TestScenario%27s\CustomerLookUpTest.cs" />
     <Compile Include="TestData\CustomerLookupDetails.cs" />
-    <Compile Include="FindTransactionsTest.cs" />
+    <Compile Include="TestScenario%27s\FindTransactionsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
