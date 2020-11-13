@@ -4,10 +4,11 @@ using OpenQA.Selenium.Edge;
 using System;
 using System.IO;
 using System.Reflection;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace AutomationResources
 {
-    //The purpose of this webdriverfactory class is to generate us our webdrivers. This class is not a test class it's a regualr class.
+    //The purpose of this webdriverfactory class is to generate us our webdrivers. This class is not a test class it's a regular class.
     public class WebDriverFactory
     {
         public IWebDriver Create(BrowserType browserType)
@@ -26,6 +27,8 @@ namespace AutomationResources
         }
         private IWebDriver GetChromeDriver()
         {
+            new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());  //This keeps our drivers up-to-date automatically
+
             var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             return new ChromeDriver(outPutDirectory);
         }

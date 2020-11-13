@@ -27,53 +27,6 @@ namespace ParaBank
         {
             FindTransactions.Click();
         }
-
-        internal void FindTransactionByAccountAndTransID()
-        {
-            FindTransactions.Click();
-            AccountList.Click();
-            AccountList.SendKeys("12345");
-            FindByTransIDField.Clear();
-            FindByTransIDField.SendKeys("12145");
-            FindTransactionsButtonID.Click();
-            Thread.Sleep(1000);
-        }
-
-        internal void FindTransactionByDate(string findByDate)
-        {
-            FindTransactions.Click();
-            AccountList.Click();
-            AccountList.SendKeys("12345");
-            FindByDateField.Clear();
-            FindByDateField.SendKeys(findByDate);
-            FindTransactionsButtonDate.Click();
-            Thread.Sleep(1000);
-        }
-
-        internal void FindTransactionsByAccountAndDateRange(string betweenDate, string andDate)
-        {
-            FindTransactions.Click();
-            AccountList.Click();
-            AccountList.SendKeys("12345");
-            DateRangeBetweenField.Clear();
-            DateRangeBetweenField.SendKeys(betweenDate);
-            DateRangeAndField.Clear();
-            DateRangeAndField.SendKeys(andDate);
-            FindTransactionsButtonDateRange.Click();
-            Thread.Sleep(1000);
-        }
-
-        internal void FindTransactionsByAmount(string amountValue)
-        {
-            FindTransactions.Click();
-            AccountList.Click();
-            AccountList.SendKeys("12345");
-            FindByAmountField.Clear();
-            FindByAmountField.SendKeys(amountValue);
-            FindTransactionsButtonAmount.Click();
-            Thread.Sleep(1000);
-        }
-
         internal void EnterTextInFindTransId(string text)
         {
             FindTransactions.Click();
