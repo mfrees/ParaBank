@@ -8,8 +8,9 @@ namespace ParaBank
     {
         public IWebDriver Driver { get; set; }
 
+        //This class holds the setup and teardown which can be used by each test class.
         [Description("Login included in this base test")]
-        [SetUp] //This class holds the setup and teardown which can be used by each test class.
+        [SetUp] 
         public void SetupForEverySingleTestMethod()
         {
             var factory = new WebDriverFactory();
