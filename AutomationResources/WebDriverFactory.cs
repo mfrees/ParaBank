@@ -8,7 +8,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 namespace AutomationResources
 {
-    //The purpose of this webdriverfactory class is to generate us our webdrivers. This class is not a test class it's a regular class.
+    //The purpose of this webdriverfactory class is to generate our webdrivers. This class is not a test class it's a regular class.
     public class WebDriverFactory
     {
         public IWebDriver Create(BrowserType browserType)
