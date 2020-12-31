@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 
 
@@ -17,6 +18,7 @@ namespace ParaBank
         public void InitializeDatabase()
         {
             AdminApplicationPage.InitialiseDatabase();
+            Assert.That(Driver.FindElement(By.XPath("//*[@id='rightPanel']/p/b")).Displayed);
             Assert.That("Database Initialized", Is.EqualTo("Database Initialized"));
         }
 
@@ -27,6 +29,7 @@ namespace ParaBank
         public void CleanDatabase()
         {
             AdminApplicationPage.CleanWebsite();
+            Assert.That(Driver.FindElement(By.XPath("//*[@id='rightPanel']/p/b")).Displayed);
             Assert.That("Database Cleaned", Is.EqualTo("Database Cleaned"));
         }
 
