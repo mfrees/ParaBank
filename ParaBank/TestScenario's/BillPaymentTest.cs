@@ -31,6 +31,7 @@ namespace ParaBank
 
             BillPaymentServicePage.FillOutFormAndSubmit(payeeinformation);
             Thread.Sleep(2000);
+            Assert.That(Driver.FindElement(By.XPath("//*[@id='rightPanel']/div/div/h1")).Displayed);
             Assert.That("Bill Payment to William Davies in the amount of $10.00", Is.EqualTo("Bill Payment to William Davies in the amount of $10.00"));
         }
         [Description("Click Sending Payment button with no fields populated to test mandatory field warnings.")]
@@ -40,7 +41,9 @@ namespace ParaBank
         {
             BillPaymentServicePage.TextAndFieldMandatoryFieldWarnings();
             Thread.Sleep(1000);
+            Assert.That(Driver.FindElement(By.XPath("//*[@id='rightPanel']/div/div/h1")).Displayed); //Verifies the page title element is displayed.
             Assert.That("Bill Payment Service", Is.EqualTo("Bill Payment Service")); //Verifies the page title
+            Assert.That(Driver.FindElement(By.XPath("//*[@id='rightPanel']/div/div/p")).Displayed); //Verifies the sentence below the page title element is displayed.
             Assert.That("Enter payee information", Is.EqualTo("Enter payee information")); //Verifies sentence below the page title
             Assert.That("Payee name is required.", Is.EqualTo("Payee name is required.")); //Verifies the Payee Name mandatory field
             Assert.That("Address is required.", Is.EqualTo("Address is required.")); //Verifies the Address field mandatory field warning
@@ -64,7 +67,7 @@ namespace ParaBank
 
             BillPaymentServicePage.EnterTextInNumericFields(payeeinformation);
 
-            //Assertions to follow here
+            
             Assert.That("Please enter a valid number.", Is.EqualTo("Please enter a valid number."));
             Assert.That("Please enter a valid amount.", Is.EqualTo("Please enter a valid amount."));
         }
