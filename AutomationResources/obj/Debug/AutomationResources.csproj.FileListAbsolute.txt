@@ -35,4 +35,3 @@ C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\Automa
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csproj.CopyComplete
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.dll
 C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.pdb
-C:\Users\Michael Rees\source\repos\ParaBank\AutomationResources\obj\Debug\AutomationResources.csprojAssemblyReference.cache

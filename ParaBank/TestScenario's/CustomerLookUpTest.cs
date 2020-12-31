@@ -18,19 +18,27 @@ namespace ParaBank
         {
             Assert.Multiple(testDelegate: () =>
             {
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='title']")).Displayed); //verifies the Customer Lookup element is displayed.
                 Assert.That("Customer Lookup", Is.EqualTo("Customer Lookup"));
                 Assert.That("Please fill out the following information in order to validate your account.", Is.EqualTo("Please fill out the following information in order to validate your account."));
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='form2']/tbody/tr/td/b")).Displayed); //Verifies the First Name element is displayed.
                 Assert.That("First Name:", Is.EqualTo("First Name:"));
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='form2']/tbody/tr[2]/td/b")).Displayed); //verifies the Last Name element is displayed.
                 Assert.That("Last Name:", Is.EqualTo("Last Name:"));
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='form2']/tbody/tr[3]/td/b")).Displayed); //verifies the Address element is displayed.
                 Assert.That("Address:", Is.EqualTo("Address:"));
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='form2']/tbody/tr[4]/td/b")).Displayed); //verifies the City element is displayed.
                 Assert.That("City:", Is.EqualTo("City:"));
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='form2']/tbody/tr[5]/td/b")).Displayed); //verifies the State element is displayed.
                 Assert.That("State:", Is.EqualTo("State:"));
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='form2']/tbody/tr[6]/td/b")).Displayed); //verifies the Zip Code element is displayed.
                 Assert.That("Zip Code:", Is.EqualTo("Zip Code:"));
+                Assert.That(Driver.FindElement(By.XPath("//*[@class='form2']/tbody/tr[7]/td/b")).Displayed); //verifies the SSN element is displayed.
                 Assert.That("SSN:", Is.EqualTo("SSN:"));
                 Assert.IsTrue(Driver.FindElement(By.XPath("//*[@value='Find My Login Info']")).Displayed);
             });
         }
-        [Description("Verify mandatory fields error's ")]
+        [Description("Verify mandatory fields error's")]
         [Author("Michael Rees")]
         [Test]
         public void VerifyManadtoryFieldAlerts()
