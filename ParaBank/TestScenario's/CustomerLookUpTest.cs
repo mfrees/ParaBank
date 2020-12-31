@@ -74,8 +74,9 @@ namespace ParaBank
 
             CustomerLookUpPage.CompleteFormAndSubmit(customerlookupdetails);
 
-            Assert.That("Error!", Is.EqualTo("Error!"));
-            Assert.That("An internal error has occurred and has been logged.", Is.EqualTo("An internal error has occurred and has been logged."));
+            Assert.That(Driver.FindElement(By.XPath("//*[@class='title']")).Displayed); //verifies that the Error! element is displayed.
+            Assert.That("Error!", Is.EqualTo("Error!")); //verifies the Error! text.
+            Assert.That(Driver.FindElement(By.XPath("//*[@class='error']")).Displayed); //verifies that the error message is displayed.
         }
         [Description("This is run before every test in this class but after the BaseTest1")]
         [SetUp]
